@@ -8,6 +8,11 @@
     kubectl apply -k argo/ -n argocd
     ```
 
+3. deploy argo rollout to namespace argocd
+    ```
+    kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/rollout-extension/v0.1.0/manifests/install.yaml
+    ```
+
 ### note
 - to get initial argocd password
     ```
