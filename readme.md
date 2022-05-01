@@ -12,7 +12,6 @@
 2. add repository
   ```
   flux create source git <NAME> \
-  --url=https://github.com/stefanprodan/podinfo \
   --url=<APP_REPOSITORY_URL> \
   --branch=<BRANCH_NAME> \
   --interval=30s \
