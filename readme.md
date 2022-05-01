@@ -46,7 +46,7 @@
     channel: general
     secretRef:
       name: slack-url
-    ```
+  ```
 3. define alert
   ```
   apiVersion: notification.toolkit.fluxcd.io/v1beta1
