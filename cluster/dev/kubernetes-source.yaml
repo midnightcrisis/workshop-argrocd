@@ -8,5 +8,7 @@ spec:
   interval: 30s
   ref:
     branch: dev
-  url: ssh://git@github.com/warapong-pj/workshop.git
+  secretRef:
+    name: kubernetes-key
+  url: ssh://git@github.com/warapong-pj/kubernetes.git
 
