@@ -5,7 +5,7 @@ metadata:
   name: reloader-kustomization
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 1m0s
   path: ./reloader
   prune: true
   sourceRef:
