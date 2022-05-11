@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sample
-        image: ghcr.io/warapong-pj/sample:2.0.0
+        image: ghcr.io/warapong-pj/sample:1.0.0
         ports:
         - containerPort: 80
         resources:
