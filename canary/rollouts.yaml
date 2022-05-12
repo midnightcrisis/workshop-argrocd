@@ -13,7 +13,7 @@ spec:
       steps:
         - setWeight: 10
         - pause: {}
-        - setWeight: 10
+        - setWeight: 20
         - pause: {}
-        - setWeight: 10
+        - setWeight: 50
         - pause: {}
