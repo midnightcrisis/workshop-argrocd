@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1               # Create a rollout resource
+kind: Rollout
+metadata:
+  name: sample
+spec:
+  replicas: 4
+  workloadRef:                                 # Reference an existing Deployment using workloadRef field
+    apiVersion: apps/v1
+    kind: Deployment
+    name: sample
+  strategy:
+    blueGreen:
+      activeService: sample-active
+      previewService: sample-preview
+      autoPromotionEnabled: false
