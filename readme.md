@@ -39,3 +39,10 @@
         --set k8sServicePort=6443 \
         --set prometheus.enabled=true
     ```
+
+### note
+- namespace stuck as `Terminating`
+    1. kubectl get namespace <NAMESPACE> -o json > <NAMESPACE>.json
+    2. remove kubernetes from finalizers array which is under spec
+    3. kubectl replace --raw "/api/v1/namespaces/<NAMESPACE>/finalize" -f ./<NAMESPACE>.json
+    4. kubectl get namespace
