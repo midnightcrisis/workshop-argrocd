@@ -39,7 +39,3 @@
         --set k8sServicePort=6443 \
         --set prometheus.enabled=true
     ```
-
-helm search repo bitnami/redis --versions
-helm pull bitnami/redis --version 16.8.9 --untar
-helm install redis ./redis --values ./redis/values-test.yaml
