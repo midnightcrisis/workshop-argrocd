@@ -1,0 +1,34 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: botkube
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: botkube
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: infracloudio
+      version: v0.12.4
+  install:
+    crds: Create
+    createNamespace: true
+  interval: 1h0m0s
+  releaseName: botkube
+  targetNamespace: botkube
+  upgrade:
+    crds: CreateReplace
+  values:
+    communications:
+      existingSecretName: botkube-communication-secret
+    config:
+      settings:
+        clustername: kube_local
+        kubectl:
+          enabled: true
+    image:
+      repository: infracloudio/botkube
+      tag: v0.12.4
