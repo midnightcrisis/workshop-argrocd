@@ -69,3 +69,7 @@
 7. kubectl argo rollouts get rollouts sample --watch
 8. kubectl argo rollouts promote sample
 9. argocd app delete sample
+
+### reference
+- [argo cd cli](https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd/)
+- [argo rollouts cli](https://argoproj.github.io/argo-rollouts/generated/kubectl-argo-rollouts/kubectl-argo-rollouts/)
